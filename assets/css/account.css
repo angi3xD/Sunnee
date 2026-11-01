@@ -1,0 +1,433 @@
+@charset "UTF-8";
+/* ==========================================
+   PAGINA ACCOUNT — BRAND IDENTITY SUNNEE
+   ========================================== */
+/* --- Variabili & Palette Cromatica --- */
+body.sunnee-account-page {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F5F0;
+  color: #231c18;
+}
+
+/* MAIN CONTAINER */
+.account-main {
+  padding: 4rem 2rem 6rem;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.account-main .account-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* 1. SEZIONE AUTH (LOGIN / REGISTER) */
+.auth-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.auth-wrapper .auth-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+.auth-wrapper .auth-tabs .tab-btn {
+  background: none;
+  border: none;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: rgba(62, 39, 35, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+.auth-wrapper .auth-tabs .tab-btn.active {
+  color: #231c18;
+  font-weight: 500;
+  border-bottom: 1px solid #a67c52;
+  padding-bottom: 0.2rem;
+}
+.auth-wrapper .auth-tabs .tab-sep {
+  color: rgba(166, 124, 82, 0.3);
+  font-size: 0.9rem;
+}
+.auth-wrapper .auth-form {
+  display: none;
+  flex-direction: column;
+}
+.auth-wrapper .auth-form.active {
+  display: flex;
+}
+.auth-wrapper .auth-form .form-tag {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #a67c52;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.auth-wrapper .auth-form .form-title {
+  font-family: "Windsong", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #231c18;
+  text-align: center;
+  margin: 0 0 0.8rem;
+}
+.auth-wrapper .auth-form .form-sub {
+  font-size: 0.85rem;
+  color: #3E2723;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* INPUTS & FORM CONTROLS */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.input-group label {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #231c18;
+}
+.input-group .label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-group .label-row .forgot-pass {
+  font-size: 0.7rem;
+  color: #3E2723;
+  text-decoration: underline;
+}
+.input-group .label-row .forgot-pass:hover {
+  color: #231c18;
+}
+.input-group input {
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(166, 124, 82, 0.3);
+  background-color: #ffffff;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.85rem;
+  color: #231c18;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: #231c18;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 500px) {
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+.checkbox-group input {
+  margin-top: 0.2rem;
+  accent-color: #231c18;
+}
+.checkbox-group label {
+  font-size: 0.75rem;
+  color: #3E2723;
+  line-height: 1.5;
+}
+
+.btn-account-submit {
+  width: 100%;
+  background-color: #231c18;
+  color: #ffffff;
+  border: none;
+  padding: 1.1rem;
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-account-submit:hover {
+  background-color: #a67c52;
+}
+
+/* 2. DASHBOARD UTENTE */
+.dashboard-wrapper .dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+  padding-bottom: 1.8rem;
+  margin-bottom: 3rem;
+}
+.dashboard-wrapper .dashboard-header .dash-tag {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #a67c52;
+  text-transform: uppercase;
+}
+.dashboard-wrapper .dashboard-header .dash-title {
+  font-family: "Windsong", serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #231c18;
+  margin: 0.3rem 0 0;
+}
+.dashboard-wrapper .dashboard-header .btn-logout {
+  background: none;
+  border: 1px solid rgba(166, 124, 82, 0.3);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  color: #3E2723;
+}
+.dashboard-wrapper .dashboard-header .btn-logout:hover {
+  background-color: #231c18;
+  color: #ffffff;
+}
+.dashboard-wrapper .dashboard-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3.5rem;
+}
+@media (max-width: 768px) {
+  .dashboard-wrapper .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.dashboard-wrapper .dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dashboard-wrapper .dash-nav .dash-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: none;
+  border: none;
+  padding: 0.9rem 1rem;
+  font-size: 0.8rem;
+  color: #3E2723;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.dashboard-wrapper .dash-nav .dash-nav-btn svg {
+  stroke: #3E2723;
+}
+.dashboard-wrapper .dash-nav .dash-nav-btn:hover, .dashboard-wrapper .dash-nav .dash-nav-btn.active {
+  background-color: #ffffff;
+  color: #231c18;
+  font-weight: 500;
+}
+.dashboard-wrapper .dash-nav .dash-nav-btn:hover svg, .dashboard-wrapper .dash-nav .dash-nav-btn.active svg {
+  stroke: #a67c52;
+}
+.dashboard-wrapper .dash-content .pane-title {
+  font-family: "Windsong", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #231c18;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.dashboard-wrapper .dash-content {
+  /* Order Card */
+}
+.dashboard-wrapper .dash-content .order-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(166, 124, 82, 0.15);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.dashboard-wrapper .dash-content .order-card .order-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.dashboard-wrapper .dash-content .order-card .order-header-row .order-num {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #231c18;
+  display: block;
+}
+.dashboard-wrapper .dash-content .order-card .order-header-row .order-date {
+  font-size: 0.75rem;
+  color: #3E2723;
+}
+.dashboard-wrapper .dash-content .order-card .order-header-row .badge-delivered {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.6rem;
+  text-transform: uppercase;
+}
+.dashboard-wrapper .dash-content .order-card .order-items-thumb {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.dashboard-wrapper .dash-content .order-card .order-items-thumb img {
+  width: 60px;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.dashboard-wrapper .dash-content .order-card .order-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(166, 124, 82, 0.1);
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+.dashboard-wrapper .dash-content .order-card .order-footer-row .btn-order-details {
+  color: #a67c52;
+  text-decoration: none;
+}
+.dashboard-wrapper .dash-content .order-card .order-footer-row .btn-order-details:hover {
+  text-decoration: underline;
+}
+.dashboard-wrapper .dash-content {
+  /* Address Card */
+}
+.dashboard-wrapper .dash-content .address-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(166, 124, 82, 0.15);
+  padding: 1.5rem;
+  position: relative;
+}
+.dashboard-wrapper .dash-content .address-card .default-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  color: #a67c52;
+  border: 1px solid #a67c52;
+  padding: 0.2rem 0.5rem;
+}
+.dashboard-wrapper .dash-content .address-card h4 {
+  font-family: "Windsong", serif;
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+}
+.dashboard-wrapper .dash-content .address-card p {
+  font-size: 0.8rem;
+  color: #3E2723;
+  margin: 0 0 0.4rem;
+  line-height: 1.6;
+}
+.dashboard-wrapper .dash-content .address-card .btn-edit-address {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #231c18;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* POPUP DI SIMULAZIONE */
+.sim-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(35, 28, 25, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.sim-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.sim-modal .sim-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem 2rem 2rem;
+  background: #F8F5F0;
+  color: #231c18;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.sim-modal .sim-modal-box h3 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+.sim-modal .sim-modal-box p {
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.sim-modal .sim-modal-box .btn-account-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.sim-modal .sim-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #231c18;
+}
+.sim-modal .sim-meta {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+.sim-modal .sim-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+  font-size: 0.9rem;
+}
+.sim-modal .sim-row small {
+  display: block;
+  opacity: 0.65;
+  font-size: 0.75rem;
+  margin-top: 0.15rem;
+}
+.sim-modal .sim-total {
+  font-weight: 700;
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}/*# sourceMappingURL=account.css.map */

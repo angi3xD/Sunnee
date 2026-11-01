@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* ==========================================
+   PAGINA FAQ & ASSISTENZA — SUNNEE LUXURY
+   ========================================== */
+/* --- Variabili & Palette Cromatica --- */
+body.sunnee-faq-page {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F5F0;
+  color: #231c18;
+}
+
+/* MAIN CONTAINER */
+.faq-main {
+  padding: 5rem 2rem 7rem;
+  min-height: 75vh;
+}
+@media (max-width: 768px) {
+  .faq-main {
+    padding: 3rem 1.2rem 4rem;
+  }
+}
+.faq-main .faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.faq-main .faq-tag {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #a67c52;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.faq-main .faq-title {
+  font-family: "Windsong", serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #231c18;
+  margin: 0 0 3.5rem;
+}
+@media (max-width: 768px) {
+  .faq-main .faq-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ACCORDION FAQ */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-top: 1px solid rgba(166, 124, 82, 0.2);
+}
+.faq-accordion .faq-item {
+  border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+  transition: background-color 0.3s ease;
+}
+.faq-accordion .faq-item .faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.8rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Windsong", serif;
+  font-size: 1.15rem;
+  color: #231c18;
+  transition: color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .faq-accordion .faq-item .faq-question {
+    padding: 1.4rem 0.2rem;
+    font-size: 1rem;
+  }
+}
+.faq-accordion .faq-item .faq-question:hover {
+  color: #a67c52;
+}
+.faq-accordion .faq-item .faq-question .faq-icon {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #a67c52;
+  margin-left: 1rem;
+}
+.faq-accordion .faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 0.5rem;
+}
+.faq-accordion .faq-item .faq-answer p {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: #3E2723;
+  font-weight: 300;
+  margin: 0 0 1.5rem;
+}
+.faq-accordion .faq-item {
+  /* Stato Attivo (Aperto) */
+}
+.faq-accordion .faq-item.active .faq-question {
+  color: #a67c52;
+}
+.faq-accordion .faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-bottom: 0.5rem;
+}/*# sourceMappingURL=faq.css.map */

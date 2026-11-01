@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* ==========================================
+   PAGINE LEGALI — Privacy e Terms
+   ========================================== */
+/* --- Variabili & Palette Cromatica --- */
+.sunnee-legal-page {
+  background: #F8F5F0;
+  color: #3E2723;
+}
+.sunnee-legal-page .legal-main {
+  padding: 4rem 1.5rem 5rem;
+}
+.sunnee-legal-page .legal-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.sunnee-legal-page .legal-tag {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: #a67c52;
+  margin-bottom: 1rem;
+}
+.sunnee-legal-page .legal-title {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+.sunnee-legal-page .legal-note {
+  padding: 1rem 1.2rem;
+  margin-bottom: 2.5rem;
+  background: #F3EFEA;
+  border-left: 3px solid #a67c52;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.sunnee-legal-page h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 2rem 0 0.6rem;
+}
+.sunnee-legal-page p {
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.sunnee-legal-page a {
+  color: #C85A32;
+}
+
+.faq-contact {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #C5B9AC;
+  text-align: center;
+}
+.faq-contact h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+.faq-contact a {
+  color: #C85A32;
+}
+
+.coming-soon {
+  opacity: 0.55;
+  cursor: default;
+}/*# sourceMappingURL=legal.css.map */

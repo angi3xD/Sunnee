@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunnee — Sustainable Beachwear</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- 1. Ticker Mobile: Posizionato sopra la navbar, visibile solo su smartphone -->
+    <div class="ticker-mobile-bar">
+        <div class="ticker-mobile-track">
+            <span class="ticker-mobile-item">Sustainable Swimwear</span>
+            <span class="ticker-mobile-item">New arrivals every Monday</span>
+            <span class="ticker-mobile-item">New Collection 2026</span>
+            <span class="ticker-mobile-item">Conscious Elegance</span>
+        </div>
+    </div>
+
+    <!-- 1. Striscia Ticker  -->
+    <div class="ticker-desktop-bar ticker-standalone-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">SUSTAINABLE SWIMWEAR</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">NEW COLLECTION 2026</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">CONSCIOUS ELEGANCE</span>
+            <span class="ticker-item">—</span>
+            <!-- Duplicato per effetto loop fluido -->
+            <span class="ticker-item">SUSTAINABLE SWIMWEAR</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">NEW COLLECTION 2026</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">CONSCIOUS ELEGANCE</span>
+            <span class="ticker-item">—</span>
+        </div>
+    </div>
+
+    <!-- Header / Navbar Trasparente e Sottile -->
+<header class="header">
+    <div class="nav-container">
+        <!-- Navigazione Desktop Sinistra: Categorie Shop -->
+        <nav class="nav-left desktop-nav">
+            <a href="#" id="menuTriggerBtn" class="nav-trigger">Menu</a>
+            <a href="#" id="searchTriggerBtn" class="nav-trigger">Search</a>
+        </nav>
+
+        <!-- Navigazione Mobile Sinistra (Menu Hamburger) -->
+        <nav class="nav-left mobile-nav">
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+
+        <!-- Logo Centrale -->
+        <a href="index.html" class="logo">Sunnee</a>
+
+        <!-- Navigazione Desktop Destra: Account e Carrello -->
+        <nav class="nav-right desktop-nav">
+            <a href="account.html">Sign In</a>
+            <a href="bag.html" class="bag-count">Bag (<span class="bag-num">0</span>)</a>
+            
+        </nav>
+
+        <!-- Navigazione Mobile Destra: Icone -->
+        <nav class="nav-right mobile-nav">
+            <a href="#" class="nav-icon-link search-trigger-mobile" aria-label="Cerca">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="bag.html" class="nav-icon-link bag-icon" aria-label="Carrello">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="bag-count bag-num">0</span>
+            </a>
+        </nav>
+    </div>
+</header>
+
+    <!-- Hero Section (A Tutta Schermata Sotto la Navbar) -->
+    <section id="home" class="hero">
+        <img src="assets/images/backgrounds/bg-1.jpg" class="hero-bg-img" alt="Sunnee Background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="subtitle">Sunnee | Sustainable Beachwear Collection</span>
+            <h1>Eleganza Consapevole</h1>
+            <p>Design essenziale e materiali sostenibili per un lusso che rispetta il pianeta.</p>
+            <a href="#collections" class="btn-hero">Esplora la collezione</a>
+        </div>
+    </section>
+
+    <!-- Sezione Collections con Card ad Arco & Teaser Kids Line -->
+<section id="collections" class="arch-cards-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Sunnee Functional Lines</span>
+            <h2 class="section-title">The Collections</h2>
+        </div>
+        
+        <div class="arch-grid">
+            <!-- Card 1: Relax -->
+            <div class="arch-card">
+                <div class="arch-img-wrap">
+                    <img src="assets/images/models/model1.jpg" alt="Relax Collection">
+                    <button class="btn-quick-view" data-product="palmera">Quick View</button>   <!-- Relax -->
+                </div>
+                <span class="arch-tag">Ocean Waste Nylon</span>
+                <span class="arch-label">Relax</span>
+                <p class="arch-desc">Comfort e vestibilità essenziale per il mare di tutti i giorni.</p>
+            </div>
+
+            <!-- Card 2: Active -->
+            <div class="arch-card">
+                <div class="arch-img-wrap">
+                    <img src="assets/images/models/model2.jpg" alt="Active Collection">
+                    <button class="btn-quick-view" data-product="sol">Quick View</button>       <!-- Active -->
+                </div>
+                <span class="arch-tag">Recycled Fishing Nets</span>
+                <span class="arch-label">Active</span>
+                <p class="arch-desc">Sostegno e libertà di movimento per gli sport acquatici.</p>
+            </div>
+
+            <!-- Card 3: Extreme -->
+            <div class="arch-card">
+                <div class="arch-img-wrap">
+                    <img src="assets/images/models/model3.jpg" alt="Extreme Collection">
+                    <button class="btn-quick-view" data-product="aura">Quick View</button>     <!-- Extreme -->
+                </div>
+                <span class="arch-tag">High-Performance Eco-Fiber</span>
+                <span class="arch-label">Extreme</span>
+                <p class="arch-desc">Progettato per atleti e surfisti professionisti.</p>
+            </div>
+        </div>
+
+        <!-- Teaser Linea Kids (Entro il prossimo anno) -->
+        <div class="kids-teaser-banner">
+            <div class="kids-teaser-content">
+                <span class="kids-badge">Coming Soon 2027</span>
+                <h3>Sunnee Kids Collection</h3>
+                <p>Beachwear sostenibile, protettivo e rigenerato pensato per i più piccoli.</p>
+            </div>
+        </div>
+
+        <div class="cta-wrap">
+            <a href="shop.html" class="btn-bronze">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sezione Sostenibilità / Come Funziona -->
+<section class="sustainability-story-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Conscious Innovation</span>
+            <h2 class="section-title">From Ocean Waste to Luxury Beachwear</h2>
+            <p class="section-intro">
+                Diamo nuova vita alle reti da pesca dismesse e ai rifiuti plastici marini, 
+                trasformandoli in filati brevettati ad alte prestazioni.
+            </p>
+        </div>
+        <div class="story-grid">
+            <div class="story-step">
+                <span class="step-number">01</span>
+                <h3>Recupero marino</h3>
+                <p>Collaboriamo con pescatori e associazioni locali per raccogliere reti da pesca dismesse e plastica dai fondali e dalle coste.</p>
+            </div>
+            <div class="story-step">
+                <span class="step-number">02</span>
+                <h3>Rigenerazione & Brevetto</h3>
+                <p>I materiali vengono selezionati, lavati e fusi in una nuova fibra tessile rigenerata, resistente al cloro, alla salsedine e ai raggi UV.</p>
+            </div>
+            <div class="story-step">
+                <span class="step-number">03</span>
+                <h3>Sartorialità Etica</h3>
+                <p>Il filato prende forma in bikini e costumi tecnici dalle linee essenziali, progettati per durare a lungo nel rispetto del mare.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Sezione Moodboard Asimmetrico con Filtro Categorie -->
+<section class="editorial-moodboard-section">
+    <div class="moodboard-header">
+        <span class="mood-subtitle">Visual Narrative</span>
+        <h2 class="mood-title">The Sunnee World</h2>
+        
+        <!-- Barra dei Filtri Categorie -->
+        <div class="mood-filters" id="moodFilters">
+            <button class="filter-btn active" data-filter="all">Tutti</button>
+            <button class="filter-btn" data-filter="relax">Relax</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="extreme">Extreme</button>
+        </div>
+    </div>
+    
+    <div class="container-moodboard">
+        <div class="moodboard-grid" id="moodboardGrid">
+                    <!-- Le card vengono generate da assets/js/home.js, leggendo assets/js/products.js -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Full-width Atmospheric Quote Section -->
+    <section class="quote-banner-section">
+        <div class="quote-overlay"></div>
+        <div class="quote-content">
+            <h2>Designed for the sea,<br><span>made to last.</span></h2>
+        </div>
+    </section>
+
+   <!-- Footer Principale dell'E-commerce -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Sezione Superiore: Newsletter & Brand Mission -->
+            <div class="footer-top-row">
+                <div class="footer-brand-col">
+                    <h3 class="footer-logo">Sunnee</h3>
+                    <p class="footer-tagline">Elevating sustainable swimwear through ocean-bound plastic recycling and conscious Italian design.</p>
+                </div>
+
+                <div class="footer-newsletter-col">
+                    <h4>Join the Sunnee Wave</h4>
+                        <p>Iscriviti per scoprire in anteprima i progetti di pulizia degli oceani, i nuovi drop sostenibili e ricevere il 10% di sconto sul primo ordine.</p>                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sezione Centrale: Link e Voci di Servizio -->
+            <div class="footer-links-grid">
+                
+                <!-- Colonna 1: Shop -->
+                <div class="footer-col">
+                    <h5>Lines & Shop</h5>
+                    <ul>
+                        <li><a href="shop.html?c=relax">Relax Line</a></li>
+                        <li><a href="shop.html?c=active">Active Line</a></li>
+                        <li><a href="shop.html?c=extreme">Extreme Line</a></li>
+                        <li><span class="coming-soon">Kids Collection (2027)</span></li>
+                        <li><a href="#moodboard">The Sunnee World</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonna 2: Customer Care -->
+                <div class="footer-col">
+                    <h5>Customer Care</h5>
+                    <ul>
+                        <li><a href="faq.html#shipping">Shipping & Delivery</a></li>
+                        <li><a href="faq.html#returns">Returns & Exchanges</a></li>
+                        <li><a href="faq.html#sizes">Size Guide</a></li>
+                        <li><a href="account.html">Track Your Order</a></li>
+                        <li><a href="faq.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonna 3: About -->
+                <div class="footer-col">
+                    <h5>Our Philosophy</h5>
+                    <ul>
+                        <li><a href="about.html">Chi Siamo</a></li>
+                        <li><a href="about.html">Come Funziona</a></li>
+                        <li><a href="about.html">Il Filato Brevettato</a></li>
+                        <li><a href="about.html">Ocean Cleanup Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonna 4: Connect / Social -->
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                        <li><a href="https://it.pinterest.com/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank">TikTok</a></li>
+                        <li><a href="https://open.spotify.com/intl-it" target="_blank">Spotify Playlists</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Sezione Inferiore: Copyright & Legal -->
+            <div class="footer-bottom-row">
+                <div class="copyright">
+                    <p>© 2026 SUNNEE Swimwear. All Rights Reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span>&mdash;</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span>&mdash;</span>
+                    <a href="privacy.html#cookie">Cookie Settings</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+<!-- ========================================== -->
+<!-- MODALE QUICK VIEW -->
+<!-- ========================================== -->
+<div class="quickview-modal" id="quickviewModal" aria-hidden="true">
+    <div class="quickview-overlay" id="quickviewOverlay"></div>
+    <div class="quickview-content">
+        <button class="quickview-close" id="quickviewClose" aria-label="Chiudi">&times;</button>
+        <div class="quickview-body">
+            <div class="quickview-media">
+                <img id="qvImage" src="" alt="Anteprima Prodotto">
+            </div>
+            <div class="quickview-details">
+                <span class="qv-badge">100% Recycled Ocean Plastic</span>
+                <h3 id="qvTitle">Nome Prodotto</h3>
+                <p class="qv-price" id="qvPrice">€0.00</p>
+                <p class="qv-description" id="qvDescription">Descrizione del prodotto e dettagli del materiale sostenibile.</p>
+                
+                <!-- Selezione Taglia -->
+                <div class="qv-options">
+                    <label>Taglia:</label>
+                    <div class="size-selector">
+                        <button class="size-btn active">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                    </div>
+                </div>
+
+                <button class="btn-add-to-cart">Aggiungi alla Borsa</button>
+                <a href="shop.html" id="qvLink" class="qv-collection-link">Vedi tutta la collezione &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================== -->
+<!-- SEARCH OVERLAY A SCOMPARSA -->
+<!-- ========================================== -->
+<div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-container">
+        <button class="search-close-btn" id="searchCloseBtn" aria-label="Chiudi ricerca">&times;</button>
+        <div class="search-input-wrap">
+            <span class="search-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <input type="text" id="searchInput" placeholder="Cerca bikini, interi, accessori sostenibili..." autocomplete="off">
+        </div>
+        <div class="search-suggestions">
+            <span class="suggestion-title">Ricerche popolari:</span>
+            <div class="suggestion-tags">
+                <a href="shop.html?c=relax">Relax</a>
+                <a href="shop.html?c=active">Active</a>
+                <a href="shop.html?c=extreme">Extreme</a>
+                <a href="shop.html">Kids Line</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================== -->
+<!-- MOBILE DRAWER MENU & OVERLAY -->
+<!-- ========================================== -->
+<div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+
+<aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+        <span class="drawer-logo">Sunnee</span>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Chiudi menu">&times;</button>
+    </div>
+
+    <nav class="drawer-nav">
+        <ul>
+            <li><a href="index.html" class="drawer-link active">Home</a></li>
+            <li><a href="#collections" class="drawer-link">Collezioni</a></li>
+            <li><a href="shop.html" class="drawer-link">Shop</a></li>
+            <li><a href="about.html" class="drawer-link">Chi Siamo</a></li>
+            <li><a href="#sustainability" class="drawer-link">Sostenibilità</a></li>
+            <li><a href="account.html" class="drawer-link">Il mio Account</a></li>
+        </ul>
+    </nav>
+
+    <div class="drawer-footer">
+        <span class="drawer-tagline">Conscious Beachwear & Swimwear</span>
+        <div class="drawer-socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://it.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        </div>
+    </div>
+</aside>
+
+<!-- Notifica Toast di aggiunta al carrello -->
+<div class="cart-toast" id="cartToast" aria-live="polite">
+    <div class="toast-content">
+        <span class="toast-icon">✓</span>
+        <div class="toast-text">
+            <span class="toast-title">Aggiunto alla Borsa</span>
+            <span class="toast-subtitle" id="toastItemName">Articolo selezionato</span>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script> 
+    <script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+/* ==========================================
+   PAGINA ACCOUNT — BRAND IDENTITY SUNNEE
+   ========================================== */
+
+@use 'variables' as *;
+
+$sunnee-bg: $bg-color;
+$sunnee-dark: $color-footer-bg;
+$sunnee-accent: $color-gold;
+$sunnee-brown: $walnut-brown;
+
+body.sunnee-account-page {
+    margin: 0;
+    padding: 0;
+    background-color: $sunnee-bg;
+    color: $sunnee-dark;
+
+
+}
+
+/* MAIN CONTAINER */
+.account-main {
+    padding: 4rem 2rem 6rem;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+
+    .account-container {
+        width: 100%;
+        max-width: 1000px;
+    }
+}
+
+/* 1. SEZIONE AUTH (LOGIN / REGISTER) */
+.auth-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+
+    .auth-tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 3rem;
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-family: $font-sans;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: rgba(62, 39, 35, 0.5);
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.3s ease;
+
+            &.active {
+                color: $sunnee-dark;
+                font-weight: 500;
+                border-bottom: 1px solid $sunnee-accent;
+                padding-bottom: 0.2rem;
+            }
+        }
+
+        .tab-sep {
+            color: rgba(166, 124, 82, 0.3);
+            font-size: 0.9rem;
+        }
+    }
+
+    .auth-form {
+        display: none;
+        flex-direction: column;
+
+        &.active {
+            display: flex;
+        }
+
+        .form-tag {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: $sunnee-accent;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-title {
+            font-family: $font-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: $sunnee-dark;
+            text-align: center;
+            margin: 0 0 0.8rem;
+        }
+
+        .form-sub {
+            font-size: 0.85rem;
+            color: $sunnee-brown;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+    }
+}
+
+/* INPUTS & FORM CONTROLS */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+
+    label {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $sunnee-dark;
+    }
+
+    .label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .forgot-pass {
+            font-size: 0.7rem;
+            color: $sunnee-brown;
+            text-decoration: underline;
+
+            &:hover {
+                color: $sunnee-dark;
+            }
+        }
+    }
+
+    input {
+        padding: 0.85rem 1rem;
+        border: 1px solid rgba(166, 124, 82, 0.3);
+        background-color: #ffffff;
+        font-family: $font-sans;
+        font-size: 0.85rem;
+        color: $sunnee-dark;
+
+        &:focus {
+            outline: none;
+            border-color: $sunnee-dark;
+        }
+    }
+}
+
+.form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+
+    input {
+        margin-top: 0.2rem;
+        accent-color: $sunnee-dark;
+    }
+
+    label {
+        font-size: 0.75rem;
+        color: $sunnee-brown;
+        line-height: 1.5;
+    }
+}
+
+.btn-account-submit {
+    width: 100%;
+    background-color: $sunnee-dark;
+    color: #ffffff;
+    border: none;
+    padding: 1.1rem;
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $sunnee-accent;
+    }
+}
+
+/* 2. DASHBOARD UTENTE */
+.dashboard-wrapper {
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+        padding-bottom: 1.8rem;
+        margin-bottom: 3rem;
+
+        .dash-tag {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: $sunnee-accent;
+            text-transform: uppercase;
+        }
+
+        .dash-title {
+            font-family: $font-serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: $sunnee-dark;
+            margin: 0.3rem 0 0;
+        }
+
+        .btn-logout {
+            background: none;
+            border: 1px solid rgba(166, 124, 82, 0.3);
+            padding: 0.6rem 1.2rem;
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            color: $sunnee-brown;
+
+            &:hover {
+                background-color: $sunnee-dark;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 3.5rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
+    .dash-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .dash-nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: none;
+            border: none;
+            padding: 0.9rem 1rem;
+            font-size: 0.8rem;
+            color: $sunnee-brown;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+
+            svg {
+                stroke: $sunnee-brown;
+            }
+
+            &:hover, &.active {
+                background-color: #ffffff;
+                color: $sunnee-dark;
+                font-weight: 500;
+
+                svg {
+                    stroke: $sunnee-accent;
+                }
+            }
+        }
+    }
+
+    .dash-content {
+        .pane-title {
+            font-family: $font-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: $sunnee-dark;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+
+        /* Order Card */
+        .order-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(166, 124, 82, 0.15);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            .order-header-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.2rem;
+
+                .order-num {
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                    color: $sunnee-dark;
+                    display: block;
+                }
+
+                .order-date {
+                    font-size: 0.75rem;
+                    color: $sunnee-brown;
+                }
+
+                .badge-delivered {
+                    background-color: rgba(39, 174, 96, 0.1);
+                    color: #27ae60;
+                    font-size: 0.65rem;
+                    letter-spacing: 1px;
+                    padding: 0.3rem 0.6rem;
+                    text-transform: uppercase;
+                }
+            }
+
+            .order-items-thumb {
+                display: flex;
+                gap: 0.8rem;
+                margin-bottom: 1.2rem;
+
+                img {
+                    width: 60px;
+                    height: 75px;
+                    object-fit: cover;
+                }
+            }
+
+            .order-footer-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid rgba(166, 124, 82, 0.1);
+                padding-top: 1rem;
+                font-size: 0.8rem;
+
+                .btn-order-details {
+                    color: $sunnee-accent;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        /* Address Card */
+        .address-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(166, 124, 82, 0.15);
+            padding: 1.5rem;
+            position: relative;
+
+            .default-badge {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                font-size: 0.55rem;
+                letter-spacing: 1.5px;
+                color: $sunnee-accent;
+                border: 1px solid $sunnee-accent;
+                padding: 0.2rem 0.5rem;
+            }
+
+            h4 {
+                font-family: $font-serif;
+                font-size: 1.1rem;
+                margin: 0 0 0.8rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $sunnee-brown;
+                margin: 0 0 0.4rem;
+                line-height: 1.6;
+            }
+
+            .btn-edit-address {
+                background: none;
+                border: none;
+                padding: 0;
+                margin-top: 1rem;
+                font-size: 0.75rem;
+                color: $sunnee-dark;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* POPUP DI SIMULAZIONE */
+.sim-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(35, 28, 25, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sim-modal-box {
+        position: relative;
+        width: 100%;
+        max-width: 440px;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2.5rem 2rem 2rem;
+        background: $sunnee-bg;
+        color: $sunnee-dark;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+        h3 { font-family: $font-sans; font-weight: 400; font-size: 1.4rem; margin-bottom: 1.2rem; }
+        p { line-height: 1.6; font-size: 0.9rem; margin-bottom: 1rem; }
+        .btn-account-submit { width: 100%; margin-top: 0.5rem; }
+        .form-row-2col > * { min-width: 0; }
+        input { width: 100%; box-sizing: border-box; }
+    }
+
+    .sim-close {
+        position: absolute;
+        top: 0.8rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+        color: $sunnee-dark;
+    }
+
+    .sim-meta { font-size: 0.8rem; opacity: 0.75; }
+
+    .sim-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+        font-size: 0.9rem;
+
+        small { display: block; opacity: 0.65; font-size: 0.75rem; margin-top: 0.15rem; }
+    }
+
+    .sim-total { font-weight: 700; border-bottom: none; margin-bottom: 0.5rem; }
+}
+/* Messaggio "Modifiche salvate" sotto il form profilo */
+.form-saved {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: $olive-green;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    &.is-visible { opacity: 1; }
+}

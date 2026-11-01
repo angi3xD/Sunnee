@@ -1,0 +1,246 @@
+ <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Bag — Sunnee Sustainable Beachwear</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=WindSong:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bag.css">
+</head>
+<body class="sunnee-bag-page" data-cart-managed="true">
+
+    <!-- 1. Ticker Bar Desktop -->
+    <div class="ticker-desktop-bar ticker-standalone-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">COMPLIMENTARY EXPRESS SHIPPING OVER €150</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">EASY RETURNS WITHIN 30 DAYS</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">SUSTAINABLE PACKAGING INCLUDED</span>
+            <span class="ticker-item">—</span>
+            <!-- Duplicato per loop -->
+            <span class="ticker-item">COMPLIMENTARY EXPRESS SHIPPING OVER €150</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">EASY RETURNS WITHIN 30 DAYS</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">SUSTAINABLE PACKAGING INCLUDED</span>
+            <span class="ticker-item">—</span>
+        </div>
+    </div>
+
+    <!-- 2. Header & Navbar Globale -->
+    <header class="header header--light">
+        <div class="nav-container">
+            <nav class="nav-left desktop-nav">
+                <a href="#" id="menuTriggerBtn" class="nav-trigger">Menu</a>
+                <a href="#" id="searchTriggerBtn" class="nav-trigger">Search</a>
+            </nav>
+
+            <nav class="nav-left mobile-nav">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+
+            <a href="index.html" class="logo">Sunnee</a>
+
+            <nav class="nav-right desktop-nav">
+                <a href="account.html">Sign In</a>
+                <a href="bag.html" class="bag-count active">Bag (<span class="bag-num">2</span>)</a>
+            </nav>
+
+            <nav class="nav-right mobile-nav">
+            <a href="#" class="nav-icon-link search-trigger-mobile" aria-label="Cerca">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="bag.html" class="nav-icon-link bag-icon" aria-label="Carrello">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="bag-count bag-num">0</span>
+            </a>
+        </nav>
+        </div>
+    </header>
+
+    <main class="bag-main">
+        <div class="bag-container">
+            
+            <!-- HEADER TITOLO -->
+            <div class="bag-header">
+                <span class="bag-tag">YOUR SELECTION</span>
+                <h1 class="bag-title">Shopping Bag</h1>
+            </div>
+
+            <div class="bag-layout-grid">
+                
+                <!-- COLONNA SINISTRA: LISTA PRODOTTI -->
+                <div class="bag-items-col">
+                    
+                    <!-- Barra Avanzamento Spedizione Gratuita -->
+                    <div class="free-shipping-progress">
+                        <p class="progress-text">Ti mancano <strong>€13.00</strong> per la <strong>Spedizione Gratuita Express</strong></p>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 91%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Lista Articoli -->
+                    <div class="bag-items-list">
+                        
+                        <!-- Articolo 1 -->
+                        <div class="bag-item-card">
+                            <div class="item-img-wrap">
+                                <img src="assets/images/products/set1.jpg" alt="Palmera Bikini">
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header-row">
+                                    <h3 class="item-name">Palmera Bikini</h3>
+                                    <span class="item-price">€72.00</span>
+                                </div>
+                                <span class="item-meta">Color: Terracotta / Size: S</span>
+                                <span class="item-sustainability">100% Recycled Nylon</span>
+
+                                <div class="item-actions-row">
+                                    <div class="qty-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="btn-remove-item">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Articolo 2 -->
+                        <div class="bag-item-card">
+                            <div class="item-img-wrap">
+                                <img src="assets/images/products/set2.jpg" alt="Sol Set">
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header-row">
+                                    <h3 class="item-name">Sol Set</h3>
+                                    <span class="item-price">€65.00</span>
+                                </div>
+                                <span class="item-meta">Color: Terracotta / Size: M</span>
+                                <span class="item-sustainability">ECONYL® Regenerated Yarn</span>
+
+                                <div class="item-actions-row">
+                                    <div class="qty-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="btn-remove-item">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="shop.html" class="continue-shopping-link">&larr; Continue Exploring Collection</a>
+                </div>
+
+                <!-- COLONNA DESTRAM: RIEPILOGO E CHECKOUT -->
+                <aside class="bag-summary-col">
+                    <div class="summary-card">
+                        <h2 class="summary-title">Order Summary</h2>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span class="summary-val">€137.00</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Estimated Shipping</span>
+                            <span class="summary-val">€8.00</span>
+                        </div>
+
+                        <div class="promo-code-wrap">
+                            <input type="text" placeholder="Promo or Gift Code" class="promo-input">
+                            <button class="btn-apply-promo">Apply</button>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span class="total-val">€145.00</span>
+                        </div>
+                        <span class="tax-note">Taxes and duties included</span>
+
+                        <a href="checkout.html" class="btn-checkout">PROCEED TO CHECKOUT</a>
+
+                        <div class="summary-perks">
+                            <div class="perk-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="22" height="13" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                <span>Secure encrypted checkout</span>
+                            </div>
+                            <div class="perk-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>30-day effortless returns</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-container">
+            <button class="search-close-btn" id="searchCloseBtn" aria-label="Chiudi ricerca">&times;</button>
+            <div class="search-input-wrap">
+                <span class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" id="searchInput" placeholder="Cerca bikini, interi, accessori sostenibili..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE DRAWER MENU -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <span class="drawer-logo">Sunnee</span>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Chiudi menu">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="shop.html" class="drawer-link">Shop</a></li>
+                <li><a href="about.html" class="drawer-link">Chi Siamo</a></li>
+                <li><a href="account.html" class="drawer-link">Il mio Account</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- FOOTER SINCRONIZZATO -->
+    <footer class="site-footer shop-footer-compact">
+        <div class="footer-container">
+            <div class="footer-content-row">
+                <div class="copyright">
+                    <p>© 2026 SUNNEE Swimwear. All Rights Reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="dot">•</span>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/bag.js"></script>
+</body>
+</html>

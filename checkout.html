@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — Sunnee Sustainable Beachwear</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body class="sunnee-checkout-page">
+
+    <!-- Header Minimale per il Checkout (Mantiene l'attenzione sull'acquisto) -->
+    <header class="checkout-header">
+        <div class="checkout-header-inner">
+            <a href="index.html" class="logo">Sunnee</a>
+            <div class="checkout-steps-nav">
+                <span class="step active">1. Spedizione</span>
+                <span class="step-sep">&mdash;</span>
+                <span class="step">2. Pagamento</span>
+            </div>
+            <a href="bag.html" class="back-bag-link">&larr; Torna alla Bag</a>
+        </div>
+    </header>
+
+    <main class="checkout-main">
+        <div class="checkout-container">
+            
+            <!-- COLONNA SINISTRA: FORM CHECKOUT -->
+            <div class="checkout-form-col">
+                <form id="checkoutForm">
+                    
+                    <!-- STEP 1: DATI DI SPEDIZIONE -->
+                    <section class="checkout-section">
+                        <h2 class="section-title">Indirizzo di Spedizione</h2>
+                        
+                        <div class="input-group">
+                            <label for="coEmail">Email Address *</label>
+                            <input type="email" id="coEmail" required placeholder="elena.rossi@example.com">
+                        </div>
+
+                        <div class="form-row-2col">
+                            <div class="input-group">
+                                <label for="coFirstName">Nome *</label>
+                                <input type="text" id="coFirstName" required placeholder="Elena">
+                            </div>
+                            <div class="input-group">
+                                <label for="coLastName">Cognome *</label>
+                                <input type="text" id="coLastName" required placeholder="Rossi">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="coAddress">Indirizzo e Numero Civico *</label>
+                            <input type="text" id="coAddress" required placeholder="Via della Spiga 12">
+                        </div>
+
+                        <div class="form-row-2col">
+                            <div class="input-group">
+                                <label for="coCity">Città *</label>
+                                <input type="text" id="coCity" required placeholder="Milano">
+                            </div>
+                            <div class="input-group">
+                                <label for="coZip">CAP *</label>
+                                <input type="text" id="coZip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" title="5 cifre" autocomplete="postal-code" required placeholder="20121">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="coPhone">Telefono (per la consegna) *</label>
+                            <input type="tel" id="coPhone" inputmode="tel" required autocomplete="tel" placeholder="+39 340 123 4567">
+                        </div>
+                    </section>
+
+                    <!-- STEP 2: METODO DI SPEDIZIONE -->
+                    <section class="checkout-section">
+                        <h2 class="section-title">Metodo di Consegna</h2>
+                        
+                        <div class="shipping-options">
+                            <label class="shipping-radio-box active">
+                                <input type="radio" name="shippingMethod" value="express" checked>
+                                <div class="radio-content">
+                                    <span class="ship-name">Express Courier (Impatti Neutri)</span>
+                                    <span class="ship-desc">Consegna in 24/48h lavorative con packaging sostenibile</span>
+                                </div>
+                                <span class="ship-price">€8.00</span>
+                            </label>
+
+                            <label class="shipping-radio-box">
+                                <input type="radio" name="shippingMethod" value="free">
+                                <div class="radio-content">
+                                    <span class="ship-name">Complimentary Green Shipping</span>
+                                    <span class="ship-desc">Consegna in 3-5 giorni lavorativi</span>
+                                </div>
+                                <span class="ship-price">GRATIS</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- STEP 3: METODO DI PAGAMENTO -->
+                    <section class="checkout-section">
+                        <h2 class="section-title">Pagamento Sicuro</h2>
+
+                        <div class="payment-selector-box">
+                            <label class="payment-option-card">
+                                <div class="pay-left">
+                                    <input type="radio" name="paymentType" value="card" checked>
+                                    <span class="pay-title">Carta di credito / debito</span>
+                                </div>
+                                <div class="pay-icons"><span>VISA · MASTERCARD</span></div>
+                            </label>
+
+                            <label class="payment-option-card">
+                                <div class="pay-left">
+                                    <input type="radio" name="paymentType" class="paypal">
+                                    <span class="pay-title">Paypal / Klarna (3 Rate)</span>
+                                </div>
+                                <div class="pay-icons"><span>Paga in 3 rate senza interessi</span></div>
+                            </label>
+                        </div>
+                        
+                        <div class="credit-card-fields" id="cardFields">
+                            <div class="input-group">
+                                <label for="cardNum">Numero Carta*</label>
+                                <input type="text" id="cardNum" inputmode="numeric" pattern="[0-9 ]{19}" maxlength="19" title="16 cifre" autocomplete="cc-number" placeholder="4532 •••• •••• 8891" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row-2col">
+                                <div class="input-group">
+                                    <label for="cardExp">Scadenza *</label>
+                                    <input type="text" id="cardExp" inputmode="numeric" pattern="(0[1-9]|1[0-2])/[0-9]{2}" maxlength="5" title="MM/AA" autocomplete="cc-exp" placeholder="MM/YY" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="cardCvc">CVC / CVV *</label>
+                                    <input type="text" id="cardCvc" inputmode="numeric" pattern="[0-9]{3,4}" maxlength="4" title="3 o 4 cifre" autocomplete="cc-csc" placeholder="123" required>
+                                </div>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="btn-complete-order">CONFERMA E PAGA €145.00</button>
+                </form>
+            </div>
+
+            <!-- COLONNA DESTRA: RIEPILOGO ORDINE -->
+            <aside class="checkout-summary-col">
+                <div class="summary-box">
+                    <h3 class="summary-title">Riepilogo Ordine (2)</h3>
+
+                    <div class="co-item">
+                        <img src="assets/images/products/set1.jpg" alt="Palmera Top">
+                        <div class="co-item-info">
+                            <h4>Palmera Bikini</h4>
+                            <span>Taglia: S / Colore: Terracotta</span>
+                            <strong>€72.00</strong>
+                        </div>
+                    </div>
+
+                    <div class="co-item">
+                        <img src="assets/images/products/set2.jpg" alt="Sol Set">
+                        <div class="co-item-info">
+                            <h4>Sol Set</h4>
+                            <span>Taglia: M / Colore: Terracotta</span>
+                            <strong>€65.00</strong>
+                        </div>
+                    </div>
+
+                    <div class="summary-breakdown">
+                        <div class="row"><span>Subtotale</span><span>€137.00</span></div>
+                        <div class="row"><span>Spedizione Express</span><span>€8.00</span></div>
+                        <div class="row total"><span>Totale Ordine</span><span>€145.00</span></div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- MODALE DI CONFERMA ORDINE COMPLETATO -->
+    <div class="order-success-overlay" id="successOverlay">
+        <div class="success-card">
+            <span class="sunnee-sun-icon">☀️</span>
+            <h2>Grazie per il tuo Ordine!</h2>
+            <p>Abbiamo ricevuto il tuo ordine <strong>#SN-2026-9912</strong>. Ti abbiamo inviato una mail di conferma con i dettagli del tracciamento.</p>
+            <a href="index.html" class="btn-back-home">TORNA ALLA HOME</a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>

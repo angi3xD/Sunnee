@@ -1,0 +1,131 @@
+/* ==========================================
+   PAGINA FAQ & ASSISTENZA — SUNNEE LUXURY
+   ========================================== */
+
+@use 'variables' as *;
+
+$sunnee-bg: $bg-color;
+$sunnee-dark: $color-footer-bg;
+$sunnee-accent: $color-gold;
+$sunnee-brown: $walnut-brown;
+
+body.sunnee-faq-page {
+    margin: 0;
+    padding: 0;
+    background-color: $sunnee-bg;
+    color: $sunnee-dark;
+
+
+}
+
+/* MAIN CONTAINER */
+.faq-main {
+    padding: 5rem 2rem 7rem;
+    min-height: 75vh;
+
+        @media (max-width: 768px) {
+            padding: 3rem 1.2rem 4rem;
+        }
+
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .faq-tag {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+        color: $sunnee-accent;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 0.6rem;
+    }
+
+    .faq-title {
+        font-family: $font-serif;
+        font-size: 2.6rem;
+        font-weight: 400;
+        color: $sunnee-dark;
+        margin: 0 0 3.5rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+/* ACCORDION FAQ */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-top: 1px solid rgba(166, 124, 82, 0.2);
+
+    .faq-item {
+        border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+        transition: background-color 0.3s ease;
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.8rem 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            font-family: $font-serif;
+            font-size: 1.15rem;
+            color: $sunnee-dark;
+            transition: color 0.3s ease;
+
+                @media (max-width: 768px) {
+                    padding: 1.4rem 0.2rem;
+                    font-size: 1rem;
+                }
+
+            &:hover {
+                color: $sunnee-accent;
+            }
+
+            .faq-icon {
+                font-family: $font-sans;
+                font-size: 1.3rem;
+                font-weight: 300;
+                color: $sunnee-accent;
+                margin-left: 1rem;
+            }
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 0.5rem;
+
+            p {
+                font-family: $font-sans;
+                font-size: 0.88rem;
+                line-height: 1.8;
+                color: $sunnee-brown;
+                font-weight: 300;
+                margin: 0 0 1.5rem;
+            }
+        }
+
+        /* Stato Attivo (Aperto) */
+        &.active {
+            .faq-question {
+                color: $sunnee-accent;
+            }
+
+            .faq-answer {
+                max-height: 300px;
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+}

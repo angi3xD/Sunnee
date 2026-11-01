@@ -1,0 +1,373 @@
+/* ==========================================
+   PAGINA BAG — BRAND IDENTITY SUNNEE
+   ========================================== */
+
+@use 'variables' as *;
+
+$sunnee-bg: $bg-color;
+$sunnee-dark: $color-footer-bg;
+$sunnee-accent: $color-gold;
+$sunnee-brown: $walnut-brown;
+
+body.sunnee-bag-page {
+    margin: 0;
+    padding: 0;
+    background-color: $sunnee-bg;
+    color: $sunnee-dark;
+
+
+}
+
+/* MAIN CONTAINER */
+.bag-main {
+    padding: 3rem 2rem 6rem;
+    min-height: 80vh;
+
+    .bag-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .bag-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+
+        .bag-tag {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: $sunnee-accent;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .bag-title {
+            font-family: $font-serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: $sunnee-dark;
+            margin: 0;
+        }
+    }
+}
+
+/* LAYOUT GRID 2 COLONNE */
+.bag-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 4rem;
+    align-items: start;
+
+    @media (max-width: 950px) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* 1. COLONNA PRODOTTI */
+.bag-items-col {
+    
+    /* Progress Bar Spedizione */
+    .free-shipping-progress {
+        background-color: rgba(166, 124, 82, 0.08);
+        padding: 1.2rem 1.5rem;
+        border-radius: 2px;
+        margin-bottom: 2.5rem;
+
+        .progress-text {
+            font-size: 0.8rem;
+            color: $sunnee-brown;
+            margin-bottom: 0.6rem;
+
+            strong {
+                color: $sunnee-dark;
+            }
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 4px;
+            background-color: rgba(166, 124, 82, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+
+            .progress-bar-fill {
+                height: 100%;
+                background-color: $sunnee-accent;
+                transition: width 0.4s ease;
+            }
+        }
+    }
+
+    /* Lista Capi */
+    .bag-items-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .bag-item-card {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(166, 124, 82, 0.15);
+
+        .item-img-wrap {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            background-color: $warm-ivory;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+
+            .item-header-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                gap: 1rem;
+                margin-bottom: 0.4rem;
+
+                .item-name {
+                    font-family: $font-serif;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: $sunnee-dark;
+                    margin: 0;
+
+                        @media (max-width: 768px) {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 0.95rem;
+                            font-weight: 500;
+                            letter-spacing: 2px;
+                            color: $sunnee-dark;
+                            margin: 0;
+                        }
+                }
+
+
+
+                .item-price {
+                    font-family: $font-sans;
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                    color: $sunnee-dark;
+                }
+            }
+
+            .item-meta {
+                font-size: 0.8rem;
+                color: $sunnee-brown;
+                margin-bottom: 0.3rem;
+            }
+
+            .item-sustainability {
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                color: $sunnee-accent;
+                text-transform: uppercase;
+                margin-bottom: 1.2rem;
+            }
+
+            .item-actions-row {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-top: auto;
+
+                .qty-selector {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid rgba(166, 124, 82, 0.3);
+
+                    .qty-btn {
+                        background: none;
+                        border: none;
+                        padding: 0.3rem 0.8rem;
+                        cursor: pointer;
+                        color: $sunnee-dark;
+                        font-size: 0.9rem;
+
+                        &:hover {
+                            color: $sunnee-accent;
+                        }
+                    }
+
+                    .qty-value {
+                        font-size: 0.8rem;
+                        padding: 0 0.5rem;
+                    }
+                }
+
+                .btn-remove-item {
+                    background: none;
+                    border: none;
+                    font-size: 0.75rem;
+                    color: rgba(62, 39, 35, 0.6);
+                    text-decoration: underline;
+                    cursor: pointer;
+                    padding: 0;
+
+                    &:hover {
+                        color: #c0392b;
+                    }
+                }
+            }
+        }
+    }
+
+    .continue-shopping-link {
+        display: inline-block;
+        margin-top: 2.5rem;
+        font-size: 0.8rem;
+        color: $sunnee-brown;
+        text-decoration: none;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $sunnee-dark;
+        }
+    }
+}
+
+/* 2. COLONNA RIEPILOGO (ORDER SUMMARY) */
+.bag-summary-col {
+    position: sticky;
+    top: 2rem;
+
+    .summary-card {
+        background-color: #ffffff;
+        padding: 2.5rem 2rem;
+        border-radius: 2px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(166, 124, 82, 0.15);
+
+        .summary-title {
+            font-family: $font-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: $sunnee-dark;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid rgba(166, 124, 82, 0.15);
+            padding-bottom: 1rem;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: $sunnee-brown;
+            margin-bottom: 1rem;
+
+            .summary-val {
+                color: $sunnee-dark;
+                font-weight: 500;
+            }
+
+            &.total-row {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: $sunnee-dark;
+                margin-top: 1.5rem;
+                margin-bottom: 0.3rem;
+
+                .total-val {
+                    font-family: $font-serif;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .tax-note {
+            display: block;
+            font-size: 0.7rem;
+            color: rgba(62, 39, 35, 0.5);
+            margin-bottom: 1.8rem;
+        }
+
+        .promo-code-wrap {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+
+            .promo-input {
+                flex: 1;
+                padding: 0.7rem;
+                border: 1px solid rgba(166, 124, 82, 0.3);
+                font-size: 0.75rem;
+                background-color: $sunnee-bg;
+
+                &:focus {
+                    outline: none;
+                    border-color: $sunnee-dark;
+                }
+            }
+
+            .btn-apply-promo {
+                background-color: $sunnee-dark;
+                color: #ffffff;
+                border: none;
+                padding: 0 1.2rem;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $sunnee-accent;
+                }
+            }
+        }
+
+        .summary-divider {
+            height: 1px;
+            background-color: rgba(166, 124, 82, 0.15);
+            margin: 1rem 0;
+        }
+
+        .btn-checkout {
+            display: block;
+            text-align: center;
+            width: 100%;
+            background-color: $sunnee-dark;
+            color: #ffffff;
+            border: none;
+            padding: 1.1rem;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1.8rem;
+
+            &:hover {
+                background-color: $sunnee-accent;
+            }
+        }
+
+        .summary-perks {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            .perk-item {
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                font-size: 0.72rem;
+                color: $sunnee-brown;
+
+                svg {
+                    stroke: $sunnee-accent;
+                }
+            }
+        }
+    }
+}

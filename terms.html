@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Sunnee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/legal.css">
+</head>
+<body class="sunnee-legal-page">
+
+    <!-- Header Globale -->
+    <header class="header header--light">
+        <div class="nav-container">
+            <nav class="nav-left desktop-nav">
+                <a href="#" id="menuTriggerBtn" class="nav-trigger">Menu</a>
+                <a href="#" id="searchTriggerBtn" class="nav-trigger">Search</a>
+            </nav>
+
+            <nav class="nav-left mobile-nav">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+
+            <a href="index.html" class="logo">Sunnee</a>
+
+            <nav class="nav-right desktop-nav">
+                <a href="account.html">Sign In</a>
+                <a href="bag.html" class="bag-count">Bag (<span class="bag-num">0</span>)</a>
+            </nav>
+
+            <nav class="nav-right mobile-nav">
+                <a href="#" class="nav-icon-link search-trigger-mobile" aria-label="Cerca">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </a>
+                <a href="bag.html" class="nav-icon-link bag-icon" aria-label="Carrello">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="bag-count bag-num">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="legal-main">
+        <article class="legal-container">
+            <span class="legal-tag">CONDIZIONI</span>
+            <h1 class="legal-title">Terms of Service</h1>
+            <p class="legal-note">Sunnee è un progetto dimostrativo creato a scopo di studio: nessun acquisto è reale e nessun dato viene inviato o conservato su un server. Questo testo è un esempio e non ha valore legale.</p>
+
+            <h2>Natura del sito</h2>
+            <p>Sunnee è un negozio fittizio. I prodotti, i prezzi e gli ordini mostrati non esistono e non è possibile acquistare nulla.</p>
+            <h2>Spedizioni e resi</h2>
+            <p>Le informazioni su spedizioni e resi riportate nel sito servono solo a simulare l'esperienza di un e-commerce. Le trovi nella <a href="faq.html">pagina FAQ</a>.</p>
+            <h2>Proprietà intellettuale</h2>
+            <p>Il progetto è stato realizzato come esercizio. Le immagini e i marchi di terze parti restano dei rispettivi proprietari.</p>
+        </article>
+    </main>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-container">
+            <button class="search-close-btn" id="searchCloseBtn" aria-label="Chiudi ricerca">&times;</button>
+            <div class="search-input-wrap">
+                <span class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" id="searchInput" placeholder="Cerca bikini, interi, accessori sostenibili..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE DRAWER MENU -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <span class="drawer-logo">Sunnee</span>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Chiudi menu">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="shop.html" class="drawer-link">Shop</a></li>
+                <li><a href="about.html" class="drawer-link">Chi Siamo</a></li>
+                <li><a href="account.html" class="drawer-link">Il mio Account</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="site-footer shop-footer-compact">
+        <div class="footer-container">
+            <div class="footer-content-row">
+                <div class="copyright"><p>© 2026 SUNNEE Swimwear. All Rights Reserved.</p></div>
+                <div class="legal-links"><a href="privacy.html">Privacy Policy</a><span class="dot">•</span><a href="terms.html">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+@charset "UTF-8";
+/* ==========================================
+   PAGINA SHOP — BRAND IDENTITY SUNNEE
+   ========================================== */
+/* --- Variabili & Palette Cromatica --- */
+/* Palette Colori Brand Sunnee */
+body.sunnee-shop-page {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F5F0;
+  color: #231c18;
+  /* --- COLORI NAVBAR & HEADER SHOP --- */
+}
+body.sunnee-shop-page .header, body.sunnee-shop-page .cb-header {
+  background-color: #F8F5F0 !important;
+  border-bottom: 1px solid rgba(166, 124, 82, 0.15);
+  position: relative;
+  z-index: 900;
+  width: 100%;
+  /* Link, pulsanti e testi della Navbar */
+}
+body.sunnee-shop-page .header .nav-left a,
+body.sunnee-shop-page .header .nav-left button,
+body.sunnee-shop-page .header .nav-right a,
+body.sunnee-shop-page .header .nav-trigger,
+body.sunnee-shop-page .header .bag-count,
+body.sunnee-shop-page .header .cb-nav-left a,
+body.sunnee-shop-page .header .cb-nav-left button,
+body.sunnee-shop-page .header .cb-nav-right a,
+body.sunnee-shop-page .header .cb-nav-right button, body.sunnee-shop-page .cb-header .nav-left a,
+body.sunnee-shop-page .cb-header .nav-left button,
+body.sunnee-shop-page .cb-header .nav-right a,
+body.sunnee-shop-page .cb-header .nav-trigger,
+body.sunnee-shop-page .cb-header .bag-count,
+body.sunnee-shop-page .cb-header .cb-nav-left a,
+body.sunnee-shop-page .cb-header .cb-nav-left button,
+body.sunnee-shop-page .cb-header .cb-nav-right a,
+body.sunnee-shop-page .cb-header .cb-nav-right button {
+  color: #231c18 !important;
+  opacity: 1 !important;
+  text-decoration: none;
+}
+body.sunnee-shop-page .header .nav-left a:hover,
+body.sunnee-shop-page .header .nav-left button:hover,
+body.sunnee-shop-page .header .nav-right a:hover,
+body.sunnee-shop-page .header .nav-trigger:hover,
+body.sunnee-shop-page .header .bag-count:hover,
+body.sunnee-shop-page .header .cb-nav-left a:hover,
+body.sunnee-shop-page .header .cb-nav-left button:hover,
+body.sunnee-shop-page .header .cb-nav-right a:hover,
+body.sunnee-shop-page .header .cb-nav-right button:hover, body.sunnee-shop-page .cb-header .nav-left a:hover,
+body.sunnee-shop-page .cb-header .nav-left button:hover,
+body.sunnee-shop-page .cb-header .nav-right a:hover,
+body.sunnee-shop-page .cb-header .nav-trigger:hover,
+body.sunnee-shop-page .cb-header .bag-count:hover,
+body.sunnee-shop-page .cb-header .cb-nav-left a:hover,
+body.sunnee-shop-page .cb-header .cb-nav-left button:hover,
+body.sunnee-shop-page .cb-header .cb-nav-right a:hover,
+body.sunnee-shop-page .cb-header .cb-nav-right button:hover {
+  color: #a67c52 !important;
+}
+body.sunnee-shop-page .header, body.sunnee-shop-page .cb-header {
+  /* Logo Centrale */
+}
+body.sunnee-shop-page .header .logo, body.sunnee-shop-page .header .cb-logo, body.sunnee-shop-page .cb-header .logo, body.sunnee-shop-page .cb-header .cb-logo {
+  color: #231c18 !important;
+}
+body.sunnee-shop-page .header .cb-header-inner, body.sunnee-shop-page .cb-header .cb-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+@media (max-width: 768px) {
+  body.sunnee-shop-page .header .cb-header-inner, body.sunnee-shop-page .cb-header .cb-header-inner {
+    padding: 1rem 1.5rem;
+  }
+}
+body.sunnee-shop-page .header .cb-logo-wrap, body.sunnee-shop-page .cb-header .cb-logo-wrap {
+  text-align: center;
+}
+body.sunnee-shop-page .header .cb-logo-wrap .cb-logo, body.sunnee-shop-page .cb-header .cb-logo-wrap .cb-logo {
+  font-family: "Windsong", serif;
+  font-size: 3rem;
+  color: #231c18 !important;
+  display: block;
+  text-decoration: none;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  body.sunnee-shop-page .header .cb-logo-wrap .cb-logo, body.sunnee-shop-page .cb-header .cb-logo-wrap .cb-logo {
+    font-size: 2.2rem;
+  }
+}
+body.sunnee-shop-page .header .cb-logo-wrap .cb-tagline, body.sunnee-shop-page .cb-header .cb-logo-wrap .cb-tagline {
+  font-size: 0.55rem;
+  letter-spacing: 3px;
+  color: #a67c52;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.3rem;
+}
+body.sunnee-shop-page .header .cb-categories-bar, body.sunnee-shop-page .cb-header .cb-categories-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.2rem 2rem 1rem;
+  background-color: #F8F5F0;
+}
+@media (max-width: 768px) {
+  body.sunnee-shop-page .header .cb-categories-bar, body.sunnee-shop-page .cb-header .cb-categories-bar {
+    flex-direction: row;
+    gap: 0.6rem;
+    justify-content: space-between;
+    font-size: 0.4rem;
+  }
+}
+body.sunnee-shop-page .header .cb-categories-bar .cat-link, body.sunnee-shop-page .cb-header .cb-categories-bar .cat-link {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.9rem;
+  color: #3E2723 !important;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+}
+body.sunnee-shop-page .header .cb-categories-bar .cat-link:hover, body.sunnee-shop-page .header .cb-categories-bar .cat-link.active, body.sunnee-shop-page .cb-header .cb-categories-bar .cat-link:hover, body.sunnee-shop-page .cb-header .cb-categories-bar .cat-link.active {
+  opacity: 1;
+  color: #231c18 !important;
+  border-bottom: 1px solid #a67c52;
+}
+body.sunnee-shop-page .header .cb-filter-row, body.sunnee-shop-page .cb-header .cb-filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3rem 1.2rem;
+  font-size: 0.75rem;
+}
+@media (max-width: 768px) {
+  body.sunnee-shop-page .header .cb-filter-row, body.sunnee-shop-page .cb-header .cb-filter-row {
+    padding: 0.8rem 1.5rem 1.2rem;
+  }
+}
+body.sunnee-shop-page .header .cb-filter-row .cb-filter-btn, body.sunnee-shop-page .header .cb-filter-row .cb-view-btn, body.sunnee-shop-page .cb-header .cb-filter-row .cb-filter-btn, body.sunnee-shop-page .cb-header .cb-filter-row .cb-view-btn {
+  background: none;
+  border: none;
+  color: #231c18 !important;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+/* Striscia Ticker Desktop */
+.ticker-desktop-bar {
+  width: 100%;
+  overflow: hidden;
+  background-color: #F8F5F0;
+  color: #F3EFEA;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 1000;
+}
+
+/* 2. Container con Padding e Griglia Prodotti */
+.cb-catalog-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  box-sizing: border-box;
+  background-color: #F8F5F0;
+}
+@media (max-width: 768px) {
+  .cb-catalog-container {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
+
+.cb-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5rem 0.5rem;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .cb-catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .cb-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1rem;
+  }
+}
+
+.cb-product-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.cb-product-card .cb-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background-color: #F3EFEA;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .cb-product-card .cb-img-wrap {
+    height: 380px;
+  }
+}
+.cb-product-card .cb-img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cb-product-card .cb-img-wrap .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.cb-product-card .cb-img-wrap:hover img {
+  transform: scale(1.02);
+}
+.cb-product-card .cb-img-wrap:hover .img-hover {
+  opacity: 1;
+}
+.cb-product-card .cb-product-details {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.cb-product-card .cb-product-details .cb-prod-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #231c18;
+  margin: 0;
+  text-transform: uppercase;
+}
+.cb-product-card .cb-product-details .cb-prod-desc {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #3E2723;
+  margin: 0;
+  line-height: 1.2;
+}
+.cb-product-card .cb-product-details .cb-prod-price-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.3rem;
+}
+.cb-product-card .cb-product-details .cb-prod-price-row .cb-price {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #231c18;
+}
+.cb-product-card .cb-product-details .cb-prod-price-row .cb-badge {
+  background-color: rgba(166, 124, 82, 0.15);
+  color: #a67c52;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  padding: 0.2rem 0.5rem;
+  font-weight: 500;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+/* 3. Bottone "Mostra altri capi" */
+.load-more-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+.load-more-wrap .btn-load-more {
+  background-color: transparent;
+  color: #231c18;
+  border: 1px solid #3E2723;
+  padding: 0.9rem 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+.load-more-wrap .btn-load-more:hover {
+  background-color: #231c18;
+  color: #ffffff;
+}
+
+/* 4. Footer Compatto Sottile */
+.site-footer.shop-footer-compact {
+  background-color: #231c18;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid rgba(166, 124, 82, 0.2);
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 768px) {
+  .site-footer.shop-footer-compact {
+    padding: 1.5rem 1rem;
+  }
+}
+.site-footer.shop-footer-compact .footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.site-footer.shop-footer-compact .footer-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  .site-footer.shop-footer-compact .footer-content-row {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+.site-footer.shop-footer-compact .footer-content-row .copyright p {
+  margin: 0;
+  font-weight: 300;
+}
+.site-footer.shop-footer-compact .footer-content-row .legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.site-footer.shop-footer-compact .footer-content-row .legal-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.site-footer.shop-footer-compact .footer-content-row .legal-links a:hover {
+  color: #a67c52;
+}
+.site-footer.shop-footer-compact .footer-content-row .legal-links .dot {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.5rem;
+}
+
+/* 5. Overlay Modal Prodotto */
+.editorial-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.editorial-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.editorial-modal-overlay .modal-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.editorial-modal-overlay .modal-backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 2;
+}
+.editorial-modal-overlay .modal-close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.editorial-modal-overlay .modal-close-btn:hover {
+  transform: scale(1.15) rotate(90deg);
+  color: #a67c52;
+}
+.editorial-modal-overlay .modal-container {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 1100px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.editorial-modal-overlay .showcase-card-box {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 850px) {
+  .editorial-modal-overlay .showcase-card-box {
+    grid-template-columns: 1fr;
+  }
+}
+.editorial-modal-overlay .showcase-img-col {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+.editorial-modal-overlay .showcase-img-col .product-photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.editorial-modal-overlay .showcase-img-col .image-top-tag, .editorial-modal-overlay .showcase-img-col .image-bottom-tag {
+  position: absolute;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+}
+.editorial-modal-overlay .showcase-img-col .image-top-tag {
+  top: 1.5rem;
+  left: 1.5rem;
+}
+.editorial-modal-overlay .showcase-img-col .image-bottom-tag {
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+.editorial-modal-overlay .showcase-content-col {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.editorial-modal-overlay .showcase-content-col .brand-sub {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #a67c52;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.editorial-modal-overlay .showcase-content-col .product-name {
+  font-family: "Playfair Display SC", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #231c18;
+  margin-bottom: 1rem;
+}
+.editorial-modal-overlay .showcase-content-col .product-desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #3E2723;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.editorial-modal-overlay .showcase-content-col .sizes-list {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.editorial-modal-overlay .showcase-content-col .sizes-list .size-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(166, 124, 82, 0.3);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+.editorial-modal-overlay .showcase-content-col .sizes-list .size-btn:hover, .editorial-modal-overlay .showcase-content-col .sizes-list .size-btn.active {
+  background-color: #231c18;
+  color: #ffffff;
+  border-color: #231c18;
+}
+.editorial-modal-overlay .showcase-content-col .purchase-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.editorial-modal-overlay .showcase-content-col .purchase-row .product-price {
+  font-size: 1.3rem;
+  font-family: "Playfair Display SC", serif;
+  color: #231c18;
+}
+.editorial-modal-overlay .showcase-content-col .purchase-row .btn-shop-cart {
+  background-color: #231c18;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.editorial-modal-overlay .showcase-content-col .purchase-row .btn-shop-cart:hover {
+  background-color: #a67c52;
+}
+.editorial-modal-overlay .showcase-content-col .product-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border-top: 1px solid rgba(166, 124, 82, 0.2);
+  padding-top: 1.5rem;
+}
+.editorial-modal-overlay .showcase-content-col .product-specs-grid .spec-column h5 {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: #a67c52;
+  margin-bottom: 0.4rem;
+}
+.editorial-modal-overlay .showcase-content-col .product-specs-grid .spec-column p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: rgba(62, 39, 35, 0.8);
+}
+
+/* ==========================================
+   STATE DI CARICAMENTO CON LOGO A IMMAGINE
+   ========================================== */
+.product-loader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F5F0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.product-loader-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.product-loader-overlay .loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.product-loader-overlay .loader-content .loader-logo {
+  font-family: "WindSong", "Playfair Display SC", serif;
+  font-size: 3.5rem;
+  color: #231c18;
+  letter-spacing: 2px;
+  animation: pulseLogo 1.5s ease-in-out infinite;
+}
+.product-loader-overlay .loader-content .loader-sun-logo {
+  width: 75px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  animation: pulseSun 1.6s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+}
+@keyframes pulseSun {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.95) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) rotate(15deg);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95) rotate(0deg);
+  }
+}/*# sourceMappingURL=shop.css.map */

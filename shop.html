@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All — Sunnee Sustainable Beachwear</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=WindSong:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+</head>
+<body class="sunnee-shop-page">
+
+    <!-- 1. Ticker Mobile: visibile solo su smartphone -->
+    <div class="ticker-mobile-bar">
+        <div class="ticker-mobile-track">
+            <span class="ticker-mobile-item">Sustainable Swimwear</span>
+            <span class="ticker-mobile-item">New arrivals every Monday</span>
+            <span class="ticker-mobile-item">Free Shipping over €150</span>
+            <span class="ticker-mobile-item">Conscious Elegance</span>
+        </div>
+    </div>
+
+    <!-- 1. Striscia Ticker Desktop -->
+    <div class="ticker-desktop-bar ticker-standalone-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">SUSTAINABLE SWIMWEAR</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">NEW COLLECTION 2026</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">CONSCIOUS ELEGANCE</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">FREE SHIPPING OVER €150</span>
+            <span class="ticker-item">—</span>
+            <!-- Duplicato per loop continuo -->
+            <span class="ticker-item">SUSTAINABLE SWIMWEAR</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">NEW COLLECTION 2026</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">CONSCIOUS ELEGANCE</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">FREE SHIPPING OVER €150</span>
+            <span class="ticker-item">—</span>
+        </div>
+    </div>
+
+    <!-- 2. Header & Navbar -->
+    <header class="header header--light">
+        <div class="nav-container">
+            <!-- Navigazione Desktop Sinistra -->
+            <nav class="nav-left desktop-nav">
+                <a href="#" id="menuTriggerBtn" class="nav-trigger">Menu</a>
+                <a href="#" id="searchTriggerBtn" class="nav-trigger">Search</a>
+            </nav>
+
+            <!-- Navigazione Mobile Sinistra (Menu Hamburger) -->
+            <nav class="nav-left mobile-nav">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+
+            <!-- Logo Centrale -->
+            <a href="index.html" class="logo">Sunnee</a>
+
+            <!-- Navigazione Desktop Destra -->
+            <nav class="nav-right desktop-nav">
+                <a href="account.html">Sign In</a>
+                <a href="bag.html" class="bag-count active">Bag (<span class="bag-num">0</span>)</a>
+            </nav>
+
+            <!-- Navigazione Mobile Destra -->
+            <nav class="nav-right mobile-nav">
+                <a href="#" class="nav-icon-link search-trigger-mobile" aria-label="Cerca">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </a>
+                <a href="bag.html" class="nav-icon-link bag-icon" aria-label="Carrello">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="bag-count bag-num">0</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Barra delle Categorie dello Shop -->
+        <nav class="cb-categories-bar" aria-label="Collezioni">
+            <a href="#" class="cat-link active" data-cat="all">Tutti</a>
+            <a href="#" class="cat-link" data-cat="relax">Relax</a>
+            <a href="#" class="cat-link" data-cat="active">Active</a>
+            <a href="#" class="cat-link" data-cat="extreme">Extreme</a>
+        </nav>
+    </header>
+
+    <!-- 3. Catalogo Prodotti -->
+    <main class="cb-catalog-container">
+        <p class="collection-intro" id="collectionIntro"></p>
+
+        <div class="cb-catalog-grid" id="product-grid">
+            <!-- Le card vengono generate da assets/js/products.js -->
+        </div>
+
+        <!-- Sezione Bottone "Mostra altri capi" -->
+        <div class="load-more-wrap">
+            <p class="load-more-count">Mostrando 8 di 12 Capi</p>
+            <button class="btn-load-more" id="load-more-btn" >Mostra altri capi</button>
+        </div>
+    </main>
+    <!-- Modal Overlay Prodotto Editoriale -->
+    <div id="product-modal" class="editorial-modal-overlay">
+        <!-- SCHERMATA DI ATTESA / LOADER ORIGINALE CON LOGO -->
+        <div id="modal-loader" class="product-loader-overlay">
+            <div class="loader-content">
+                <img src="assets/images/brand/logo.png" alt="Sunnee Sun Logo" class="loader-sun-logo">
+                <span class="loader-logo">Sunnee</span>
+            </div>
+        </div>
+        <img src="assets/images/backgrounds/bg-model.jpg" alt="Atmospheric Background" class="modal-bg-img">
+        <div class="modal-backdrop-overlay"></div>
+
+        <button class="modal-close-btn" id="modal-close" aria-label="Chiudi Scheda">&times;</button>
+
+        <div class="modal-container">
+            <div class="showcase-card-box">
+                <div class="showcase-img-col">
+                    <img src="assets/images/lookbook/prove1.jpg" alt="Prodotto Sunnee" class="product-photo" id="modal-img">
+                    <div class="image-top-tag">SUNNEE THE LABEL / 2026</div>
+                    <div class="image-bottom-tag">ITEM PAGE</div>
+                </div>
+
+                <div class="showcase-content-col">
+                    <div class="product-header-info">
+                        <span class="brand-sub">SUNNEE THE LABEL</span>
+                        <h2 class="product-name" id="modal-title">Palmera Top</h2>
+                        <p class="product-desc" id="modal-desc">
+                            Medium coverage string bikini with adjustable straps and pearl detailing.
+                        </p>
+                    </div>
+
+                    <div class="product-options-box">
+                        <span class="color-label">COLOR — <strong id="modal-color">Carob</strong></span>
+                        <div class="sizes-list">
+                            <div class="sizes-list" id="modal-sizes"></div>
+                        </div>
+                    </div>
+
+                    <div class="purchase-row">
+                        <span class="product-price" id="modal-price">EUR €72.00</span>
+                        <button class="btn-shop-cart" id="btnAddToCartModal">ADD TO CART</button>
+                    </div>
+
+                    <div class="product-specs-grid">
+                        <div class="spec-column">
+                            <h5>FEATURING</h5>
+                            <p id="modal-featuring">Stretch recycled nylon bikini set with adjustable straps.</p>
+                        </div>
+                        <div class="spec-column">
+                            <h5>MATERIAL</h5>
+                            <p id="modal-material">78% recycled polyamide, 22% elastane.</p>
+                        </div>
+                        <div class="spec-column">
+                            <h5>CARE</h5>
+                            <p id="modal-care">Rinse with cold water after saltwater.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SEARCH OVERLAY A SCOMPARSA -->
+    <!-- ========================================== -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-container">
+            <button class="search-close-btn" id="searchCloseBtn" aria-label="Chiudi ricerca">&times;</button>
+            <div class="search-input-wrap">
+                <span class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" id="searchInput" placeholder="Cerca bikini, interi, accessori sostenibili..." autocomplete="off">
+            </div>
+            <div class="search-suggestions">
+                <span class="suggestion-title">Ricerche popolari:</span>
+                <div class="suggestion-tags">
+                    <a href="shop.html">Palmera Set</a>
+                    <a href="shop.html">Costumi Interi</a>
+                    <a href="shop.html">Bikini Active</a>
+                    <a href="shop.html">Kids Line</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MOBILE DRAWER MENU & OVERLAY -->
+    <!-- ========================================== -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <span class="drawer-logo">Sunnee</span>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Chiudi menu">&times;</button>
+        </div>
+
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="shop.html" class="drawer-link active">Shop</a></li>
+                <li><a href="about.html" class="drawer-link">Chi Siamo</a></li>
+                <li><a href="index.html#sustainability" class="drawer-link">Sostenibilità</a></li>
+                <li><a href="account.html" class="drawer-link">Il mio Account</a></li>
+            </ul>
+        </nav>
+
+        <div class="drawer-footer">
+            <span class="drawer-tagline">Conscious Beachwear & Swimwear</span>
+            <div class="drawer-socials">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://it.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Notifica Toast di aggiunta al carrello -->
+    <div class="cart-toast" id="cartToast" aria-live="polite">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            <div class="toast-text">
+                <span class="toast-title">Aggiunto alla Borsa</span>
+                <span class="toast-subtitle" id="toastItemName">Articolo selezionato</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Principale Sincronizzato -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <div class="footer-brand-col">
+                    <h3 class="footer-logo">Sunnee</h3>
+                    <p class="footer-tagline">
+                        Elevating sustainable swimwear through ocean-bound plastic recycling and conscious design. Made for the sea, crafted to last.
+                    </p>
+                </div>
+
+                <div class="footer-newsletter-col">
+                    <h4>Join the Sunnee Wave</h4>
+                    <p>Iscriviti per scoprire in anteprima i progetti di pulizia degli oceani, i nuovi drop sostenibili e ricevere il 10% di sconto sul primo ordine.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Inserisci la tua email" required>
+                        <button type="submit">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h5>Lines & Shop</h5>
+                    <ul>
+                        <li><a href="shop.html?c=relax">Relax Line</a></li>
+                        <li><a href="shop.html?c=active">Active Line</a></li>
+                        <li><a href="shop.html?c=extreme">Extreme Line</a></li>
+                        <li><a href="index.html#collections">Kids Collection (2027)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Customer Care</h5>
+                    <ul>
+                        <li><a href="faq.html#shipping">Shipping & Delivery</a></li>
+                        <li><a href="faq.html#returns">Returns & Exchanges</a></li>
+                        <li><a href="faq.html#sizes">Size Guide</a></li>
+                        <li><a href="account.html">Track Your Order</a></li>
+                        <li><a href="faq.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Our Philosophy</h5>
+                    <ul>
+                        <li><a href="about.html">Chi Siamo</a></li>
+                        <li><a href="index.html#sustainability">Come Funziona</a></li>
+                        <li><a href="index.html#sustainability">Il Filato Brevettato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://it.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <div class="copyright">
+                    <p>© 2026 SUNNEE Swimwear. All Rights Reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span>&mdash;</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span>&mdash;</span>
+                    <a href="privacy.html#cookie">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script per le interattività dello Shop -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/shop.js"></script>
+</body>
+</html>

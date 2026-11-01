@@ -1,0 +1,664 @@
+/* ==========================================
+   PAGINA SHOP — BRAND IDENTITY SUNNEE
+   ========================================== */
+
+@use 'variables' as *;
+
+/* Palette Colori Brand Sunnee */
+$sunnee-bg: $bg-color;             
+$sunnee-dark: $color-footer-bg;     
+$sunnee-accent: $color-gold;        
+$sunnee-brown: $walnut-brown;       
+
+body.sunnee-shop-page {
+    margin: 0;
+    padding: 0;
+    background-color: $sunnee-bg;
+    color: $sunnee-dark;
+
+    /* --- COLORI NAVBAR & HEADER SHOP --- */
+    .header, .cb-header {
+        background-color: $sunnee-bg !important;
+        border-bottom: 1px solid rgba(166, 124, 82, 0.15);
+        position: relative;
+        top: 0;
+        z-index: 900;
+        width: 100%;
+
+        /* Link, pulsanti e testi della Navbar */
+        .nav-left a,
+        .nav-left button,
+        .nav-right a,
+        .nav-trigger,
+        .bag-count,
+        .cb-nav-left a,
+        .cb-nav-left button,
+        .cb-nav-right a,
+        .cb-nav-right button {
+            color: $sunnee-dark !important;
+            opacity: 1 !important;
+            text-decoration: none;
+
+            &:hover {
+                color: $sunnee-accent !important;
+            }
+        }
+
+
+
+
+        /* Logo Centrale */
+        .logo, .cb-logo {
+            color: $sunnee-dark !important;
+        }
+
+        .cb-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 3rem;
+
+            @media (max-width: 768px) {
+                padding: 1rem 1.5rem;
+            }
+        }
+
+        .cb-logo-wrap {
+            text-align: center;
+
+            .cb-logo {
+                font-family: $font-serif;
+                font-size: 3rem;
+                color: $sunnee-dark !important;
+                display: block;
+                text-decoration: none;
+                line-height: 1;
+
+                @media (max-width: 768px) {
+                    font-size: 2.2rem;
+                }
+            }
+
+            .cb-tagline {
+                font-size: 0.55rem;
+                letter-spacing: 3px;
+                color: $sunnee-accent;
+                text-transform: uppercase;
+                display: block;
+                margin-top: 0.3rem;
+            }
+        }
+
+        .cb-categories-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            padding: 1.2rem 2rem 1rem;
+            background-color: $sunnee-bg;
+
+            
+                @media (max-width: 768px) {
+                    justify-content: flex-start;
+                    gap: 1.8rem;
+                    padding: 1rem 1.5rem 0.8rem;
+                    font-size: 0.4rem;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                    scrollbar-width: none;
+
+                    &::-webkit-scrollbar { display: none; }
+
+        /* centrate quando ci stanno tutte, scorrevoli quando non ci stanno */
+        .cat-link:first-child { margin-left: auto; }
+        .cat-link:last-child { margin-right: auto; }
+                }
+
+
+            .cat-link {
+                font-family: $font-sans;
+                font-size: 0.75rem;
+                color: $sunnee-brown !important;
+                text-decoration: none;
+                opacity: 0.8;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+
+                &:hover, &.active {
+                    opacity: 1;
+                    color: $sunnee-dark !important;
+                    border-bottom: 1px solid $sunnee-accent;
+                }
+            }
+        }
+ 
+    }
+}
+
+/* Striscia Ticker Desktop */
+.ticker-desktop-bar {
+    width: 100%;
+    overflow: hidden;
+    background-color: $sunnee-bg;
+    color: $warm-ivory;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 1000;
+}
+
+/* 2. Container con Padding e Griglia Prodotti */
+.cb-catalog-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 3rem 2.5rem;
+    box-sizing: border-box;
+    background-color: $sunnee-bg;
+
+    @media (max-width: 768px) {
+        padding: 1.5rem 1rem 3rem;
+    }
+}
+
+.cb-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5rem 0.5rem;
+    width: 100%;
+
+    @media (max-width: 1400px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem 1rem;
+    }
+}
+
+.cb-product-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    .cb-img-wrap {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+        background-color: $warm-ivory;
+        border-radius: 2px;
+
+        @media (max-width: 768px) {
+            height: 380px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .img-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+            img { transform: scale(1.02); }
+            .img-hover { opacity: 1; }
+        }
+    }
+
+    .cb-product-details {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .cb-prod-title {
+            font-family: $font-sans;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: $sunnee-dark;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .cb-prod-desc {
+            font-family: $font-sans;
+            font-size: 0.8rem;
+            font-style: italic;
+            color: $sunnee-brown;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .cb-prod-price-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 0.3rem;
+
+            .cb-price {
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: $sunnee-dark;
+            }
+
+            .cb-badge {
+                background-color: rgba(166, 124, 82, 0.15);
+                color: $sunnee-accent;
+                font-size: 0.55rem;
+                letter-spacing: 1.5px;
+                padding: 0.2rem 0.5rem;
+                font-weight: 500;
+                border-radius: 2px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+/* 3. Bottone "Mostra altri capi" */
+.load-more-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+
+    .btn-load-more {
+        background-color: transparent;
+        color: $sunnee-dark;
+        border: 1px solid $sunnee-brown;
+        padding: 0.9rem 3rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+
+        &:hover {
+            background-color: $sunnee-dark;
+            color: #ffffff;
+        }
+    }
+}
+
+/* 4. Footer Compatto Sottile */
+.site-footer.shop-footer-compact {
+    background-color: $sunnee-dark;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid rgba(166, 124, 82, 0.2);
+    font-family: 'Montserrat', sans-serif;
+
+    @media (max-width: 768px) {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-content-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 0.8rem;
+            text-align: center;
+        }
+
+        .copyright p {
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .legal-links {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $sunnee-accent;
+                }
+            }
+
+            .dot {
+                color: rgba(255, 255, 255, 0.3);
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+/* 5. Overlay Modal Prodotto */
+.editorial-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .modal-backdrop-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 2;
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2.5rem;
+        z-index: 10;
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 2.5rem;
+        font-weight: 300;
+        cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            transform: scale(1.15) rotate(90deg);
+            color: $sunnee-accent;
+        }
+
+        /* un cerchio scuro, così si vede su qualunque immagine */
+        @media (max-width: 768px) {
+            top: 0.8rem;
+            right: 0.8rem;
+            width: 2.75rem;          /* 44px: misura minima comoda per il dito */
+            height: 2.75rem;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            line-height: 1;
+            background: rgba(35, 28, 25, 0.7);
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+            &:hover { transform: none; color: #ffffff; }
+        }
+    }
+
+    .modal-container {
+        position: relative;
+        z-index: 3;
+        width: 90%;
+        max-width: 1100px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .showcase-card-box {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+
+        @media (max-width: 850px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .showcase-img-col {
+        position: relative;
+        height: 100%;
+        min-height: 500px;
+
+        .product-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-top-tag, .image-bottom-tag {
+            position: absolute;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.4rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .image-top-tag { top: 1.5rem; left: 1.5rem; }
+        .image-bottom-tag { bottom: 1.5rem; left: 1.5rem; }
+    }
+
+    .showcase-content-col {
+        padding: 3rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .brand-sub {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: $sunnee-accent;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-family: 'Playfair Display SC', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: $sunnee-dark;
+            margin-bottom: 1rem;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: $sunnee-brown;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .sizes-list {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 0.6rem;
+            margin-bottom: 1.5rem;
+
+            .size-btn {
+                min-width: 38px;
+                height: 38px;
+                border: 1px solid rgba(166, 124, 82, 0.3);
+                background: transparent;
+                cursor: pointer;
+                font-size: 0.75rem;
+                transition: all 0.3s ease;
+                padding: 0 0.7rem;
+
+                &:hover, &.active {
+                    background-color: $sunnee-dark;
+                    color: #ffffff;
+                    border-color: $sunnee-dark;
+                }
+            }
+        }
+
+        .purchase-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            .product-price {
+                font-size: 1.3rem;
+                font-family: 'Playfair Display SC', serif;
+                color: $sunnee-dark;
+            }
+
+            .btn-shop-cart {
+                background-color: $sunnee-dark;
+                color: #ffffff;
+                border: none;
+                padding: 0.9rem 2rem;
+                font-size: 0.75rem;
+                letter-spacing: 2px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: $sunnee-accent;
+                }
+            }
+        }
+
+        .product-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            border-top: 1px solid rgba(166, 124, 82, 0.2);
+            padding-top: 1.5rem;
+
+            .spec-column {
+                h5 {
+                    font-size: 0.65rem;
+                    letter-spacing: 1.5px;
+                    color: $sunnee-accent;
+                    margin-bottom: 0.4rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                    line-height: 1.5;
+                    color: rgba(62, 39, 35, 0.8);
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================
+   STATE DI CARICAMENTO CON LOGO A IMMAGINE
+   ========================================== */
+
+.product-loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $sunnee-bg; 
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .loader-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        .loader-logo {
+            font-family: 'WindSong', 'Playfair Display SC', serif;
+            font-size: 3.5rem;
+            color: $sunnee-dark;
+            letter-spacing: 2px;
+            animation: pulseLogo 1.5s ease-in-out infinite;
+        }
+
+        .loader-sun-logo {
+            width: 75px;
+            height: auto;
+            object-fit: contain;
+            animation: pulseSun 1.6s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes pulseLogo {
+    0% { opacity: 0.4; transform: scale(0.98); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.4; transform: scale(0.98); }
+}
+
+@keyframes pulseSun {
+    0% { opacity: 0.4; transform: scale(0.95) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.05) rotate(15deg); }
+    100% { opacity: 0.4; transform: scale(0.95) rotate(0deg); }
+}
+
+/* Frase sotto i filtri: spiega la collezione scelta */
+.collection-intro {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: $walnut-brown;
+    opacity: 0.8;
+    min-height: 1.4em;
+}

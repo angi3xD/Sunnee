@@ -1,0 +1,50 @@
+/* ==========================================
+   PAGINE LEGALI — Privacy e Terms
+   ========================================== */
+@use 'variables' as *;
+
+.sunnee-legal-page {
+    background: $bg-color;
+    color: $walnut-brown;
+
+
+
+    .legal-main { padding: 4rem 1.5rem 5rem; }
+    .legal-container { max-width: 720px; margin: 0 auto; }
+
+    .legal-tag {
+        display: block;
+        font-size: 0.7rem;
+        letter-spacing: 4px;
+        color: $color-gold;
+        margin-bottom: 1rem;
+    }
+    .legal-title {
+        font-family: $font-sans;
+        font-weight: 400;
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+    .legal-note {
+        padding: 1rem 1.2rem;
+        margin-bottom: 2.5rem;
+        background: $warm-ivory;
+        border-left: 3px solid $color-gold;
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    h2 { font-family: $font-sans; font-weight: 400; font-size: 1.2rem; margin: 2rem 0 0.6rem; }
+    p  { line-height: 1.8; font-size: 0.95rem; }
+    a  { color: $terracotta; }
+}
+
+.faq-contact {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid $warm-taupe;
+    text-align: center;
+    h2 { font-family: $font-sans; font-weight: 400; margin-bottom: 0.6rem; }
+    a { color: $terracotta; }
+}
+
+.coming-soon { opacity: 0.55; cursor: default; }

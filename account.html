@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account — Sunnee Sustainable Beachwear</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=WindSong:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/account.css">
+</head>
+<body class="sunnee-account-page">
+
+    <!-- 1. Ticker Bar Desktop -->
+    <div class="ticker-desktop-bar ticker-standalone-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">EXCLUSIVES FOR SUNNEE CLUB MEMBERS</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">COMPLIMENTARY EXPRESS SHIPPING OVER €150</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">EASY RETURNS WITHIN 30 DAYS</span>
+            <span class="ticker-item">—</span>
+            <!-- Duplicato per loop -->
+            <span class="ticker-item">EXCLUSIVES FOR SUNNEE CLUB MEMBERS</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">COMPLIMENTARY EXPRESS SHIPPING OVER €150</span>
+            <span class="ticker-item">—</span>
+            <span class="ticker-item">EASY RETURNS WITHIN 30 DAYS</span>
+            <span class="ticker-item">—</span>
+        </div>
+    </div>
+
+    <!-- 2. Header & Navbar Globale -->
+    <header class="header header--light">
+        <div class="nav-container">
+            <nav class="nav-left desktop-nav">
+                <a href="#" id="menuTriggerBtn" class="nav-trigger">Menu</a>
+                <a href="#" id="searchTriggerBtn" class="nav-trigger">Search</a>
+            </nav>
+
+            <nav class="nav-left mobile-nav">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+
+            <a href="index.html" class="logo">Sunnee</a>
+
+            <nav class="nav-right desktop-nav">
+                <a href="account.html" class="active">Sign In</a>
+                <a href="bag.html" class="bag-count">Bag (<span class="bag-num">0</span>)</a>
+            </nav>
+
+            <nav class="nav-right mobile-nav">
+            <a href="#" class="nav-icon-link search-trigger-mobile" aria-label="Cerca">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="bag.html" class="nav-icon-link bag-icon" aria-label="Carrello">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="bag-count bag-num">0</span>
+            </a>
+        </nav>
+        </div>
+    </header>
+
+    <main class="account-main">
+        <div class="account-container">
+            
+            <!-- SEZIONE AUTHENTICATION (LOGIN / REGISTER) -->
+            <div class="auth-wrapper" id="authSection">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" id="tabLoginBtn" onclick="switchTab('login')">SIGN IN</button>
+                    <span class="tab-sep">/</span>
+                    <button class="tab-btn" id="tabRegisterBtn" onclick="switchTab('register')">CREATE ACCOUNT</button>
+                </div>
+
+                <!-- FORM ACCEDI -->
+                <form class="auth-form active" id="loginForm" onsubmit="handleAuthSim(event, 'login')">
+                    <span class="form-tag">WELCOME BACK</span>
+                    <h2 class="form-title">Accedi al tuo Account</h2>
+                    <p class="form-sub">Inserisci le tue credenziali per accedere ai tuoi ordini e alle collezioni esclusive.</p>
+
+                    <div class="input-group">
+                        <label for="loginEmail">Email Address *</label>
+                        <input type="email" id="loginEmail" required placeholder="name@example.com">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label for="loginPassword">Password *</label>
+                            <a href="#" class="forgot-pass" id="forgotPassLink">Password dimenticata?</a>
+                        </div>
+                        <input type="password" id="loginPassword" required placeholder="••••••••">
+                    </div>
+
+                    <button type="submit" class="btn-account-submit">SIGN IN TO SUNNEE</button>
+                </form>
+
+                <!-- FORM REGISTRAZIONE -->
+                <form class="auth-form" id="registerForm" onsubmit="handleAuthSim(event, 'register')">
+                    <span class="form-tag">JOIN THE SUNNEE CLUB</span>
+                    <h2 class="form-title">Crea un nuovo Account</h2>
+                    <p class="form-sub">Registrati per un checkout più rapido e per accedere a promozioni riservate.</p>
+
+                    <div class="form-row-2col">
+                        <div class="input-group">
+                            <label for="regFirstName">Nome *</label>
+                            <input type="text" id="regFirstName" required placeholder="Elena">
+                        </div>
+                        <div class="input-group">
+                            <label for="regLastName">Cognome *</label>
+                            <input type="text" id="regLastName" required placeholder="Rossi">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="regEmail">Email Address *</label>
+                        <input type="email" id="regEmail" required placeholder="name@example.com">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="regPassword">Password *</label>
+                        <input type="password" id="regPassword" required placeholder="Almeno 8 caratteri">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="regNewsletter" checked>
+                        <label for="regNewsletter">Desidero ricevere anteprime esclusive e aggiornamenti sulla sostenibilità.</label>
+                    </div>
+
+                    <button type="submit" class="btn-account-submit">CREATE ACCOUNT</button>
+                </form>
+            </div>
+
+            <!-- DASHBOARD UTENTE (SIMULAZIONE UTENTE LOGGATO) -->
+            <div class="dashboard-wrapper" id="dashboardSection" style="display: none;">
+                <div class="dashboard-header">
+                    <div>
+                        <span class="dash-tag">SUNNEE MEMBER</span>
+                        <h1 class="dash-title">Benvenuta, <span id="userNameDisplay">Elena</span></h1>
+                    </div>
+                    <button class="btn-logout" onclick="handleLogout()">DISCONNETTI</button>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Navigazione Schede Account -->
+                    <aside class="dash-nav">
+                        <button class="dash-nav-btn active" onclick="switchDashTab('orders', this)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+                            I miei Ordini
+                        </button>
+                        <button class="dash-nav-btn" onclick="switchDashTab('addresses', this)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Indirizzi di Spedizione
+                        </button>
+                        <button class="dash-nav-btn" onclick="switchDashTab('details', this)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            Dettagli Profilo
+                        </button>
+                    </aside>
+
+                    <!-- Contenuto Schede -->
+                    <div class="dash-content">
+                        
+                        <!-- TAB ORDINI -->
+                        <div class="dash-tab-pane active" id="paneOrders">
+                            <h3 class="pane-title">Storico Ordini</h3>
+                            
+                            <div class="order-card">
+                                <div class="order-header-row">
+                                    <div>
+                                        <span class="order-num">Ordine #SN-2026-8891</span>
+                                        <span class="order-date">12 Ottobre 2026</span>
+                                    </div>
+                                    <span class="order-status badge-delivered">Consegnato</span>
+                                </div>
+                                <div class="order-items-thumb">
+                                    <img src="assets/images/products/set1.jpg" alt="Palmera Top">
+                                    <img src="assets/images/products/set2.jpg" alt="Sol Bikini">
+                                </div>
+                                <div class="order-footer-row">
+                                    <span class="order-total">Totale: <strong>€137.00</strong></span>
+                                    <a href="#" class="btn-order-details" data-order="SN-2026-8891">Vedi Dettagli &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TAB INDIRIZZI -->
+                        <div class="dash-tab-pane" id="paneAddresses" style="display: none;">
+                            <h3 class="pane-title">Indirizzi Salvati</h3>
+                            <div class="address-card">
+                                <span class="default-badge">PREDEFINITO</span>
+                                <h4 id="addrName">Elena Rossi</h4>
+                                <p id="addrLines">Via della Spiga, 12<br>20121 Milano (MI), Italia</p>
+                                <p id="addrPhone">Tel: +39 340 123 4567</p>
+                                <button class="btn-edit-address" id="editAddressBtn">Modifica Indirizzo</button>
+                            </div>
+                        </div>
+
+                        <!-- TAB DETTAGLI -->
+                        <div class="dash-tab-pane" id="paneDetails" style="display: none;">
+                            <h3 class="pane-title">Informazioni Personali</h3>
+                            <form class="profile-form" id="profileForm">
+                                <div class="form-row-2col">
+                                    <div class="input-group">
+                                        <label for="profileFirst">Nome</label>
+                                        <input type="text" id="profileFirst" value="Elena" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="profileLast">Cognome</label>
+                                        <input type="text" id="profileLast" value="Rossi" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="profileEmail">Email</label>
+                                    <input type="email" id="profileEmail" value="elena.rossi@example.com" required>
+                                </div>
+                                <button type="submit" class="btn-account-submit" style="width: auto; padding: 0.8rem 2rem;">SALVA MODIFICHE</button>
+                                <p class="form-saved" id="profileSaved" role="status"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-container">
+            <button class="search-close-btn" id="searchCloseBtn" aria-label="Chiudi ricerca">&times;</button>
+            <div class="search-input-wrap">
+                <span class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" placeholder="Cerca bikini, interi, accessori sostenibili..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE DRAWER MENU -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <span class="drawer-logo">Sunnee</span>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Chiudi menu">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="shop.html" class="drawer-link">Shop</a></li>
+                <li><a href="about.html" class="drawer-link">Chi Siamo</a></li>
+                <li><a href="account.html" class="drawer-link active">Il mio Account</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- FOOTER SINCRONIZZATO -->
+    <footer class="site-footer shop-footer-compact">
+        <div class="footer-container">
+            <div class="footer-content-row">
+                <div class="copyright">
+                    <p>© 2026 SUNNEE Swimwear. All Rights Reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="dot">•</span>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP DI SIMULAZIONE (password dimenticata, dettagli ordine) -->
+    <div class="sim-modal" id="simModal" aria-hidden="true">
+        <div class="sim-modal-box" role="dialog" aria-modal="true" aria-labelledby="simTitle">
+            <button class="sim-close" id="simClose" aria-label="Chiudi">&times;</button>
+            <h3 id="simTitle"></h3>
+            <div id="simBody"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPT GESTIONE SCHEDE & AUTENTICAZIONE SIMULATA -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/account.js"></script>
+</body>
+</html>
